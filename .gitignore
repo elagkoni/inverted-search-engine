@@ -1,0 +1,15 @@
+*
+!*/
+
+# Εκτός από τα παρακάτω
+!*.cpp
+!*.h
+!*.hpp
+!*.mk
+!Makefile
+!.gitignore
+!README.md
+!README.txt
+!CMakeLists.txt
+!*.sh
+!*.yml
