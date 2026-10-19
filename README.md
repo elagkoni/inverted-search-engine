@@ -1,7 +1,7 @@
 # Inverted Search Engine (C++ Implementation)
 
+[![CMake Build](https://github.com/elagkoni/inverted-search-engine/actions/workflows/cmake.yml/badge.svg)](https://github.com/elagkoni/inverted-search-engine/actions)
 [![Language](https://img.shields.io/badge/Language-C%2B%2B-blue.svg)](https://isocpp.org/)
-[![Build System](https://img.shields.io/badge/Build-CMake%20%7C%20Make-brightgreen.svg)]()
 [![Testing](https://img.shields.io/badge/Testing-Catch2-red.svg)]()
 ![License](https://img.shields.io/badge/License-MIT-green)
 
@@ -55,12 +55,9 @@ The engine supports two parallel strategies:
 
 **Note:** For more detailed multi-threading implementation analysis and performance measurements, please refer to the [`project_report`](project_report.pdf) file.
 
+## Unit Testing 
 
-## Unit Testing
-
-For the testing of the structures, we used the library `catch.hpp`.
-
-More information about the [Catch2](https://github.com/catchorg/Catch2).
+Unit testing is implemented using the [Catch2](https://github.com/catchorg/Catch2) framework, with automated testing fully integrated via **GitHub Actions**.
 
 ### Internal State Testing
 Unit tests (`MODE=TESTS`) directly inspect internal structures (BK-Tree nodes, Hashtable buckets) to verify core logic without polluting production headers with unnecessary public accessors.
@@ -82,8 +79,6 @@ The Makefile provides the following targets:
 - `make driver MT=DOCUMENT`: Compiles the competition driver using **document-level multithreading**.
 - `make lib`: Builds the shared library `libcore.so`.
 - `make clean`: Removes generated build files.
-
-<br>
 
 **Compiler Optimizations:** Both build systems enable `-O3` compiler optimizations. Our implementation remains significantly faster than the reference implementation even without these optimizations.
 
