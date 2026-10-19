@@ -46,10 +46,6 @@ add_executable(sigismund
     tests/test_sigismund.cpp
 
     test_driver/test.cpp
-    test_data/small_test.txt
-    test_data/tiny_test.txt
-
-    README.md    
     )
 
 add_definitions(-DTESTS)
