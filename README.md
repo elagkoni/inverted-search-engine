@@ -64,23 +64,22 @@ Unit tests (`MODE=TESTS`) directly inspect internal structures (BK-Tree nodes, H
 
 ## Compile & Execution
 
-### CMake Build Commands
+### Option 1: CMake Build
 
-- `cmake -DCMAKE_BUILD_TYPE=Release ..`: Configures the build in Release mode, enabling full compiler optimizations (`-O3`).
-- `make`: Compiles all target executables inside the build directory.
-- `-DTESTS`: Optional definition flag passed during configuration (`cmake -DTESTS ..`) to build unit tests instead of production targets.
+1. **Create build directory and configure:** `mkdir -p build && cd build && cmake -DCMAKE_BUILD_TYPE=Release ..`
+2. **Compile project:** `make`
+3. **Run main application:** `./sigismund`
+4. **Run unit tests:** `ctest --output-on-failure`
 
-### Makefile Build Commands
+**Note:** Passing `-DCMAKE_BUILD_TYPE=Release` enables full compiler optimizations (`-O3`).
 
-The Makefile provides the following targets:
+### Option 2: Makefile Build
 
-- `make tests MODE=TESTS`: Compiles the `testsx` executable for unit tests.
-- `make driver`: Compiles the competition driver using **word-level multithreading**.
-- `make driver MT=DOCUMENT`: Compiles the competition driver using **document-level multithreading**.
-- `make lib`: Builds the shared library `libcore.so`.
-- `make clean`: Removes generated build files.
-
-**Compiler Optimizations:** Both build systems enable `-O3` compiler optimizations. Our implementation remains significantly faster than the reference implementation even without these optimizations.
+* **Run Unit Tests:** `make tests MODE=TESTS && ./testsx`
+* **Build & Run Competition Driver (Word-Level Multithreading - Default):** `make driver && ./testdriver`
+* **Build & Run Competition Driver (Document-Level Multithreading):** `make driver MT=DOCUMENT && ./testdriver`
+* **Build Shared Library:** `make lib`
+* **Clean Build Files:** `make clean`
 
 ## Environment 
 * **Programming language:** C++
