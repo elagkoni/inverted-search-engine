@@ -7,7 +7,7 @@
 
 A high-performance, multi-threaded **Inverted Search Engine** built in C++ as an optimized implementation of the **SIGMOD 2013 Programming Contest** task. Designed for real-time keyword matching over continuous document streams, this system uses custom-built structures (**BK-Trees**, **Hashtables**) to quickly index and search text.
 
-Developed as part of the **Software Development for Information Systems (K23a)** course (Winter Semester 2021-2022) at the **Department of Informatics & Telecommunications, National and Kapodistrian University of Athens (NKUA)**.
+Developed as a collaborative team project for the **Software Development for Information Systems (K23a)** course (Winter Semester 2021-2022) at the **Department of Informatics & Telecommunications, National and Kapodistrian University of Athens (NKUA)**.
 
 Contest website: [ACM SIGMOD Programming Contest 2013](https://sigmod.kaust.edu.sa/task-details.html)
 
